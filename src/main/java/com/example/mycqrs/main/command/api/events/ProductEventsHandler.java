@@ -1,8 +1,7 @@
 package com.example.mycqrs.main.command.api.events;
 
 import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.ProductRepository;
-import lombok.extern.apachecommons.CommonsLog;
+import com.example.mycqrs.main.command.api.data.repositories.ProductRepository;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;

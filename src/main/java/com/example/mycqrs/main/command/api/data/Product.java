@@ -2,8 +2,7 @@ package com.example.mycqrs.main.command.api.data;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Data
@@ -14,4 +13,6 @@ public class Product {
     private String name;
     private BigDecimal price;
     private Integer stock;
+    @ManyToOne
+    private User user;
 }

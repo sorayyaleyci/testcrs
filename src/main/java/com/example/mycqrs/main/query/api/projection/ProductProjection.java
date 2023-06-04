@@ -2,7 +2,7 @@ package com.example.mycqrs.main.query.api.projection;
 
 
 import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.ProductRepository;
+import com.example.mycqrs.main.command.api.data.repositories.ProductRepository;
 import com.example.mycqrs.main.command.api.model.ProductRestModel;
 import com.example.mycqrs.main.query.api.queries.GetProductsQuery;
 import org.axonframework.queryhandling.QueryHandler;
