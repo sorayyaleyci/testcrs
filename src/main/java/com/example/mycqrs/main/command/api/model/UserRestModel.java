@@ -1,11 +1,10 @@
 package com.example.mycqrs.main.command.api.model;
 
-import com.example.mycqrs.main.command.api.data.Order;
-import com.example.mycqrs.main.command.api.data.Product;
+import com.example.mycqrs.main.command.api.data.entities.Order;
+import com.example.mycqrs.main.command.api.data.entities.Product;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.HashSet;
 import java.util.Set;
 
 @Data

@@ -18,4 +18,5 @@ public class MainApplication {
                 configuration -> new ProductServiceEventsErrorHandler()
         );
     }
+    
 }

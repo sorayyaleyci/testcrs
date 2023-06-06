@@ -1,23 +1,15 @@
 package com.example.mycqrs.main.query.api.projection;
 
-import com.example.mycqrs.main.command.api.data.Order;
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.User;
-import com.example.mycqrs.main.command.api.data.repositories.OrderRepository;
+import com.example.mycqrs.main.command.api.data.entities.Order;
 import com.example.mycqrs.main.command.api.data.services.OrderService;
 import com.example.mycqrs.main.command.api.model.OrderRestModel;
-import com.example.mycqrs.main.command.api.model.ProductRestModel;
-import com.example.mycqrs.main.command.api.model.UserRestModel;
 import com.example.mycqrs.main.query.api.queries.GetOrderQuery;
 import com.example.mycqrs.main.query.api.queries.GetOrderQueryByID;
-import com.example.mycqrs.main.query.api.queries.GetOrderQueryByUser;
-import com.example.mycqrs.main.query.api.queries.GetProductsQuery;
 import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component

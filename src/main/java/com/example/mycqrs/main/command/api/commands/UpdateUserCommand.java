@@ -1,7 +1,7 @@
 package com.example.mycqrs.main.command.api.commands;
 
-import com.example.mycqrs.main.command.api.data.Order;
-import com.example.mycqrs.main.command.api.data.Product;
+import com.example.mycqrs.main.command.api.data.entities.Order;
+import com.example.mycqrs.main.command.api.data.entities.Product;
 import lombok.Builder;
 import lombok.Data;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;

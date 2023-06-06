@@ -2,22 +2,18 @@ package com.example.mycqrs.main.command.api.aggregate;
 
 
 import com.example.mycqrs.main.command.api.commands.CreateOrderCommand;
-import com.example.mycqrs.main.command.api.commands.CreateProductCommand;
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.User;
+import com.example.mycqrs.main.command.api.data.entities.Product;
+import com.example.mycqrs.main.command.api.data.entities.User;
 import com.example.mycqrs.main.command.api.events.OrderCreateEvent;
-import com.example.mycqrs.main.command.api.events.ProductCreateEvent;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.modelling.command.AggregateLifecycle;
-import org.axonframework.modelling.command.TargetAggregateIdentifier;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Set;
 
 @Aggregate

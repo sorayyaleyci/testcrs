@@ -1,12 +1,10 @@
-package com.example.mycqrs.main.command.api.data;
+package com.example.mycqrs.main.command.api.data.entities;
 
-import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 

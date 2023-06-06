@@ -1,16 +1,10 @@
 package com.example.mycqrs.main.query.api.projection;
 
 
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.User;
-import com.example.mycqrs.main.command.api.data.repositories.ProductRepository;
-import com.example.mycqrs.main.command.api.data.repositories.UserRepository;
+import com.example.mycqrs.main.command.api.data.entities.User;
 import com.example.mycqrs.main.command.api.data.services.UserService;
-import com.example.mycqrs.main.command.api.model.ProductRestModel;
 import com.example.mycqrs.main.command.api.model.UserRestModel;
-import com.example.mycqrs.main.query.api.queries.GetOrderQueryByID;
 import com.example.mycqrs.main.query.api.queries.GetOrderQueryByUser;
-import com.example.mycqrs.main.query.api.queries.GetProductsQuery;
 import com.example.mycqrs.main.query.api.queries.GetUserQuery;
 import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.beans.factory.annotation.Autowired;

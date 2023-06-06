@@ -1,7 +1,7 @@
 package com.example.mycqrs.main.command.api.events;
 
-import com.example.mycqrs.main.command.api.data.Order;
-import com.example.mycqrs.main.command.api.data.Product;
+import com.example.mycqrs.main.command.api.data.entities.Order;
+import com.example.mycqrs.main.command.api.data.entities.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

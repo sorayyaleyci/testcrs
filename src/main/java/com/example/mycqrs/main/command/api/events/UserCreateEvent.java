@@ -1,15 +1,12 @@
 package com.example.mycqrs.main.command.api.events;
 
-import com.example.mycqrs.main.command.api.data.Order;
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.User;
+import com.example.mycqrs.main.command.api.data.entities.Order;
+import com.example.mycqrs.main.command.api.data.entities.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-import java.util.Date;
 import java.util.Set;
 
 

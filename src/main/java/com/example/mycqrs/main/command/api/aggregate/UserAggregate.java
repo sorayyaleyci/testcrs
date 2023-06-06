@@ -1,13 +1,10 @@
 package com.example.mycqrs.main.command.api.aggregate;
 
 
-import com.example.mycqrs.main.command.api.commands.CreateOrderCommand;
 import com.example.mycqrs.main.command.api.commands.CreateUserCommand;
 import com.example.mycqrs.main.command.api.commands.UpdateUserCommand;
-import com.example.mycqrs.main.command.api.data.Order;
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.User;
-import com.example.mycqrs.main.command.api.events.OrderCreateEvent;
+import com.example.mycqrs.main.command.api.data.entities.Order;
+import com.example.mycqrs.main.command.api.data.entities.Product;
 import com.example.mycqrs.main.command.api.events.UserCreateEvent;
 import com.example.mycqrs.main.command.api.events.UserUpdateEvent;
 import org.axonframework.commandhandling.CommandHandler;
@@ -17,8 +14,6 @@ import org.axonframework.modelling.command.AggregateLifecycle;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
-import java.math.BigDecimal;
-import java.util.Date;
 import java.util.Set;
 
 @Aggregate

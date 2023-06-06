@@ -1,13 +1,9 @@
 package com.example.mycqrs.main.command.api.data.services;
 
 import com.example.mycqrs.main.command.api.commands.RemoveProductCommand;
-import com.example.mycqrs.main.command.api.data.Order;
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.User;
+import com.example.mycqrs.main.command.api.data.entities.Order;
+import com.example.mycqrs.main.command.api.data.entities.Product;
 import com.example.mycqrs.main.command.api.data.repositories.OrderRepository;
-import com.example.mycqrs.main.command.api.data.repositories.UserRepository;
-import com.example.mycqrs.main.command.api.model.ProductRestModel;
-import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

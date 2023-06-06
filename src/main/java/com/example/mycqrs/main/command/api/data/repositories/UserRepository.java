@@ -1,6 +1,6 @@
 package com.example.mycqrs.main.command.api.data.repositories;
 
-import com.example.mycqrs.main.command.api.data.User;
+import com.example.mycqrs.main.command.api.data.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

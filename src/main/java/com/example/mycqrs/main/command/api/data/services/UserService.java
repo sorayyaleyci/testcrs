@@ -1,7 +1,6 @@
 package com.example.mycqrs.main.command.api.data.services;
 
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.User;
+import com.example.mycqrs.main.command.api.data.entities.User;
 import com.example.mycqrs.main.command.api.data.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

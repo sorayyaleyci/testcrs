@@ -1,7 +1,6 @@
 package com.example.mycqrs.main.command.api.events;
 
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.repositories.ProductRepository;
+import com.example.mycqrs.main.command.api.data.entities.Product;
 import com.example.mycqrs.main.command.api.data.services.ProductService;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.beans.BeanUtils;

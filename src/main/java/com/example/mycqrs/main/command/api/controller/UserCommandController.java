@@ -1,10 +1,7 @@
 package com.example.mycqrs.main.command.api.controller;
 
 import com.example.mycqrs.main.command.api.commands.*;
-import com.example.mycqrs.main.command.api.data.Product;
-import com.example.mycqrs.main.command.api.data.User;
 import com.example.mycqrs.main.command.api.data.services.UserService;
-import com.example.mycqrs.main.command.api.model.OrderRestModel;
 import com.example.mycqrs.main.command.api.model.ProductRestModel;
 import com.example.mycqrs.main.command.api.model.UserRestModel;
 import org.axonframework.commandhandling.gateway.CommandGateway;
@@ -14,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 

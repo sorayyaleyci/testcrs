@@ -1,4 +1,4 @@
-package com.example.mycqrs.main.command.api.data;
+package com.example.mycqrs.main.command.api.data.entities;
 
 import lombok.Data;
 
