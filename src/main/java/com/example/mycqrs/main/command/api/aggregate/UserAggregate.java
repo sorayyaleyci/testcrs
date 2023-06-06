@@ -22,6 +22,8 @@ public class UserAggregate {
     private String phone;
     private Set<Product> products;
     private Set<Order> orders;
+    private String updateId;
+    private String updateNum;
 
 
     @CommandHandler
@@ -54,6 +56,8 @@ public class UserAggregate {
         this.products=userUpdateEvent.getProducts();
         this.phone= userUpdateEvent.getPhone();
         this.orders=userUpdateEvent.getOrders();
+        this.updateId=userUpdateEvent.getUpdateId();
+        this.updateNum=userUpdateEvent.getUpdateNum();
 
     }
 }

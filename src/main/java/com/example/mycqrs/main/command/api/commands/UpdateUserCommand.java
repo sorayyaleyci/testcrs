@@ -16,5 +16,7 @@ public class UpdateUserCommand {
     private String phone;
     private Set<Product> products;
     private Set<Order> order;
+    private String updateId;
+    private String updateNum;
 
 }

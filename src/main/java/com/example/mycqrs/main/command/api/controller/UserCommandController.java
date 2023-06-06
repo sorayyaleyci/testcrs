@@ -6,10 +6,7 @@ import com.example.mycqrs.main.command.api.model.ProductRestModel;
 import com.example.mycqrs.main.command.api.model.UserRestModel;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -34,11 +31,13 @@ public class UserCommandController {
                 .build();
         return commandGateway.sendAndWait(createUserCommand);
     }
-    @PostMapping("user/add_product")
-    public String addUserProduct(@RequestBody UserRestModel userRestModel){
+    @PostMapping("user/add_product/{PRODUCT_ID}/{PRODUCT_NUM}")
+    public String addUserProduct(@PathVariable Map<String, String> pathVariables, @RequestBody UserRestModel userRestModel){
         UpdateUserCommand updateUserCommand= UpdateUserCommand.builder()
                 .phone(userRestModel.getPhone())
                 .products(userRestModel.getProducts())
+                .updateId(pathVariables.get("PRODUCT_ID"))
+                .updateNum(pathVariables.get("PRODUCT_NUM"))
                 .build();
         return commandGateway.sendAndWait(updateUserCommand);
     }

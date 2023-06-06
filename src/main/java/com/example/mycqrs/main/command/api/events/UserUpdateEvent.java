@@ -19,5 +19,7 @@ public class UserUpdateEvent {
     private String phone;
     private Set<Product> products;
     private Set<Order> orders;
+    private String updateId;
+    private String updateNum;
 
 }
