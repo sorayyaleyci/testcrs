@@ -3,9 +3,11 @@ package com.example.mycqrs.main.query.api.projection;
 
 import com.example.mycqrs.main.command.api.data.Product;
 import com.example.mycqrs.main.command.api.data.repositories.ProductRepository;
+import com.example.mycqrs.main.command.api.data.services.ProductService;
 import com.example.mycqrs.main.command.api.model.ProductRestModel;
 import com.example.mycqrs.main.query.api.queries.GetProductsQuery;
 import org.axonframework.queryhandling.QueryHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -13,15 +15,14 @@ import java.util.stream.Collectors;
 
 @Component
 public class ProductProjection {
-    private ProductRepository productRepository;
+    @Autowired
+    private ProductService productService;
 
-    public ProductProjection(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
+
     @QueryHandler
     public List<ProductRestModel> handle(GetProductsQuery getProductsQuery){
         List<Product>products=
-                productRepository.findAll();
+                productService.getProducts();
         List<ProductRestModel> productRestModels=
                 products.stream()
                 .map(product -> ProductRestModel

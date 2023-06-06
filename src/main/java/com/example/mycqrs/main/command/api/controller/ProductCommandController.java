@@ -1,6 +1,7 @@
 package com.example.mycqrs.main.command.api.controller;
 
 import com.example.mycqrs.main.command.api.commands.CreateProductCommand;
+import com.example.mycqrs.main.command.api.commands.RemoveProductCommand;
 import com.example.mycqrs.main.command.api.model.ProductRestModel;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,4 +30,15 @@ public class ProductCommandController {
                 .build();
         return commandGateway.sendAndWait(createProductCommand);
     }
+    @PostMapping("/products/remove")
+    public String deleteProduct(@RequestBody ProductRestModel productRestModel){
+        RemoveProductCommand removeProductCommand=RemoveProductCommand.builder()
+                .ProductId(UUID.randomUUID().toString())
+                .name(productRestModel.getName())
+                .price(productRestModel.getPrice())
+                .stock(productRestModel.getStock())
+                .build();
+        return commandGateway.sendAndWait(removeProductCommand);
+    }
+
 }

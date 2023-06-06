@@ -1,18 +1,23 @@
-package com.example.mycqrs.main.command.api.model;
+package com.example.mycqrs.main.command.api.events;
 
 import com.example.mycqrs.main.command.api.data.Order;
 import com.example.mycqrs.main.command.api.data.Product;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.HashSet;
 import java.util.Set;
+
 
 @Data
 @Builder
-public class UserRestModel {
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserUpdateEvent {
+    private String userId;
     private String phone;
     private Set<Product> products;
-    private Set<Order> order;
+    private Set<Order> orders;
 
 }

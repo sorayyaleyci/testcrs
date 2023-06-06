@@ -1,7 +1,9 @@
 package com.example.mycqrs.main.command.api.aggregate;
 
 import com.example.mycqrs.main.command.api.commands.CreateProductCommand;
+import com.example.mycqrs.main.command.api.commands.RemoveProductCommand;
 import com.example.mycqrs.main.command.api.events.ProductCreateEvent;
+import com.example.mycqrs.main.command.api.events.ProductRemoveEvent;
 import com.fasterxml.jackson.databind.util.BeanUtil;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
@@ -28,6 +30,14 @@ public class ProductAggregate {
         BeanUtils.copyProperties(createProductCommand,productCreateEvent);
         AggregateLifecycle.apply(productCreateEvent);
     }
+    @CommandHandler
+    public ProductAggregate(RemoveProductCommand removeProductCommand){
+        //validation
+        ProductRemoveEvent productRemoveEvent =
+                new ProductRemoveEvent();
+        BeanUtils.copyProperties(removeProductCommand,productRemoveEvent);
+        AggregateLifecycle.apply(productRemoveEvent);
+    }
     public ProductAggregate(){}
 
     @EventSourcingHandler
@@ -36,6 +46,14 @@ public class ProductAggregate {
         this.name=productCreateEvent.getName();
         this.ProductId=productCreateEvent.getProductId();
         this.price=productCreateEvent.getPrice();
+
+    }
+    @EventSourcingHandler
+    public void on(ProductRemoveEvent productRemoveEvent){
+        this.stock=productRemoveEvent.getStock();
+        this.name=productRemoveEvent.getName();
+        this.ProductId=productRemoveEvent.getProductId();
+        this.price=productRemoveEvent.getPrice();
 
     }
 

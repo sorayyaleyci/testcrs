@@ -14,5 +14,8 @@ public class Product {
     private BigDecimal price;
     private Integer stock;
     @ManyToOne
+    @JoinColumn(name = "user_products")
     private User user;
+
+
 }

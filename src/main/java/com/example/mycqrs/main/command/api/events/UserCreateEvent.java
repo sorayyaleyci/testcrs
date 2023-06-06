@@ -1,5 +1,6 @@
 package com.example.mycqrs.main.command.api.events;
 
+import com.example.mycqrs.main.command.api.data.Order;
 import com.example.mycqrs.main.command.api.data.Product;
 import com.example.mycqrs.main.command.api.data.User;
 import lombok.AllArgsConstructor;
@@ -20,4 +21,6 @@ public class UserCreateEvent {
     private String userId;
     private String phone;
     private Set<Product> products;
+    private Set<Order> orders;
+
 }

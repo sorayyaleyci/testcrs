@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Set;
 
@@ -22,5 +23,5 @@ public class OrderCreateEvent {
     private BigDecimal totalPrice;
     private User user;
     private Set<Product> products;
-    private Date date;
+    private LocalDateTime date;
 }

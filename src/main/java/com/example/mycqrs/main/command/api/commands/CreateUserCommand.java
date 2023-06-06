@@ -1,5 +1,6 @@
 package com.example.mycqrs.main.command.api.commands;
 
+import com.example.mycqrs.main.command.api.data.Order;
 import com.example.mycqrs.main.command.api.data.Product;
 import com.example.mycqrs.main.command.api.data.User;
 import lombok.Builder;
@@ -18,4 +19,6 @@ public class CreateUserCommand {
     @TargetAggregateIdentifier
     private String phone;
     private Set<Product> products;
+    private Set<Order> order;
+
 }
